@@ -1,4 +1,4 @@
-package edu.vuum.mooca;
+package edu.vuum.mocca;
 
 // Import the necessary Java synchronization and scheduling classes.
 import java.util.concurrent.CountDownLatch;
@@ -32,12 +32,31 @@ public class PingPongRight {
     public static class PlayPingPongThread extends Thread {
 
         /**
-         * Constants to distinguish between ping and pong Semaphores.
+         * Constants to distinguish between ping and pong
+         * SimpleSemaphores, if you choose to use an array of
+         * SimpleSemaphores.  If you don't use this implementation
+         * feel free to remove these constants.
          */
         private final static int FIRST_SEMA = 0;
         private final static int SECOND_SEMA = 1;
 
+        /**
+         * Maximum number of loop iterations.
+         */
         private int mMaxLoopIterations = 0;
+
+        /**
+         * String to print (either "ping!" or "pong"!) for each
+         * iteration.
+         */
+        // TODO - You fill in here.
+
+        /**
+         * Two SimpleSemaphores use to alternate pings and pongs.  You
+         * can use an array of SimpleSemaphores or just define them as
+         * two data members.
+         */
+        // TODO - You fill in here.
 
         /**
          * Constructor initializes the data member(s).
@@ -64,30 +83,18 @@ public class PingPongRight {
         }
 
         /**
-         * Hook method for ping/pong acquire.
+         * Method for acquiring the appropriate SimpleSemaphore.
          */
-        void acquire() {
+        private void acquire() {
             // TODO fill in here
         }
 
         /**
-         * Hook method for ping/pong release.
+         * Method for releasing the appropriate SimpleSemaphore.
          */
-        void release() {
+        private void release() {
             // TODO fill in here
         }
-
-        /**
-         * String to print (either "ping!" or "pong"!) for each
-         * iteration.
-         */
-        // TODO - You fill in here.
-
-        /**
-         * An array of two SimpleSemaphores use to alternate pings and
-         * pongs.
-         */
-        // TODO - You fill in here.
     }
 
     /**
@@ -127,8 +134,8 @@ public class PingPongRight {
         // TODO - Initiate the ping and pong threads, which will call
         // the run() hook method.
 
-        // TODO - replace the following line with a CountDownLatch
-        // barrier synchronizer call that waits for both threads to
+        // TODO - replace the following line with a barrier
+        // synchronizer call to mLatch that waits for both threads to
         // finish.
         throw new java.lang.InterruptedException();
 
