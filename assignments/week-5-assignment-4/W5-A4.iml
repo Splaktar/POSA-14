@@ -6,6 +6,7 @@
         <proGuardCfgFiles>
           <file>file:///usr/lib/jvm/java-7-oracle/tools/proguard/proguard-android.txt</file>
         </proGuardCfgFiles>
+        <option name="UPDATE_PROPERTY_FILES" value="true" />
       </configuration>
     </facet>
   </component>
