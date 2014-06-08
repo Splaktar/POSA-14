@@ -25,6 +25,7 @@
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="W5-A4-Android" exported="" />
+    <orderEntry type="library" name="Android-test-libs" level="project" />
   </component>
 </module>
 
