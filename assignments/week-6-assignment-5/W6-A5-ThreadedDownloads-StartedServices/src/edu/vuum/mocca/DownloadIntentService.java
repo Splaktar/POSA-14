@@ -3,10 +3,8 @@ package edu.vuum.mocca;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.Messenger;
-import android.util.Log;
 
 /**
  * @class DownloadIntentService
