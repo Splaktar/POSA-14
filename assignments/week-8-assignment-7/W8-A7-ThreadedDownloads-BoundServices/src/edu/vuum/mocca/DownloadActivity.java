@@ -142,13 +142,12 @@ public class DownloadActivity extends DownloadBase {
             // sendPath().  Please use displayBitmap() defined in
             // DownloadBase.
 
-            Runnable displayRunnable = new Runnable() {
+            runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     displayBitmap(imagePathname);
                 }
-            };
-            runOnUiThread(displayRunnable);
+            });
         }
     };
 

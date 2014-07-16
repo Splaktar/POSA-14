@@ -52,7 +52,7 @@ public class DownloadBoundServiceAsync extends Service {
             // the appropriate helper method in DownloadUtils and
             // then send the pathname back to the client via the
             // callback object.
-            String imagePathname = DownloadUtils.downloadFile(getApplicationContext(), uri);
+            String imagePathname = DownloadUtils.downloadFile(DownloadBoundServiceAsync.this, uri);
 
             if (imagePathname != null && !imagePathname.isEmpty())
                 callback.sendPath(imagePathname);
